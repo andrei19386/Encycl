@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @SpringBootApplication(scanBasePackages = {"ru.skillbox", "config"})
-public class SocialNetworkApplication {
+public class EncyclApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SocialNetworkApplication.class, args);
+        SpringApplication.run(EncyclApplication.class, args);
     }
 
     @GetMapping("/")

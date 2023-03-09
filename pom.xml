@@ -16,7 +16,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ru.skillbox</groupId>
-    <artifactId>encycl</artifactId>
+    <artifactId>Encycl</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SocialNetwork</name>
     <description>SocialNetwork</description>
@@ -174,7 +174,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>impl/src/main/java/ru.skillbox.SocialNetworkApplication</mainClass>
+                    <mainClass>impl/src/main/java/ru.skillbox.EncyclApplication</mainClass>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
