@@ -8,7 +8,7 @@ import ru.skillbox.model.Country;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-09T10:28:01+0300",
+    date = "2023-03-09T10:55:29+0300",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 19 (Oracle Corporation)"
 )
 public class GeoMapperImpl implements GeoMapper {

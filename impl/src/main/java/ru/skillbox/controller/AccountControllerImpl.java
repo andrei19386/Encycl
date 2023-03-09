@@ -14,7 +14,7 @@ import ru.skillbox.service.UserService;
 @RequiredArgsConstructor
 public class AccountControllerImpl implements AccountController {
 
-    private final PersonService personService;
+  //  private final PersonService personService;
 
     private final UserService userService;
 
@@ -22,7 +22,7 @@ public class AccountControllerImpl implements AccountController {
     @GetMapping("/me")
     public ResponseEntity<Responsable> getCurrentPerson() {
         try {
-            return ResponseEntity.ok(AccountMapper.INSTANCE.personToAccountDto(personService.getCurrentPerson()));
+            return null;//ResponseEntity.ok(AccountMapper.INSTANCE.personToAccountDto(personService.getCurrentPerson()));
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(new ErrorResponse().getResponse(e.getMessage()));
         }
@@ -32,7 +32,7 @@ public class AccountControllerImpl implements AccountController {
     @PutMapping("/me")
     public ResponseEntity<Responsable> editingAccount(@RequestBody AccountEditRq accountEditRq) {
         try {
-            return ResponseEntity.ok(personService.editing(accountEditRq));
+            return null;//ResponseEntity.ok(personService.editing(accountEditRq));
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(new ErrorResponse().getResponse(e.getMessage()));
         }
@@ -76,7 +76,7 @@ public class AccountControllerImpl implements AccountController {
     @GetMapping("/{id}")
     public ResponseEntity<Responsable> getUserById(@PathVariable long id) {
         try {
-            return ResponseEntity.ok(AccountMapper.INSTANCE.personToAccountDto(personService.getPersonById(id)));
+            return null;// ResponseEntity.ok(AccountMapper.INSTANCE.personToAccountDto(personService.getPersonById(id)));
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(new ErrorResponse().getResponse(e.getMessage()));
         }

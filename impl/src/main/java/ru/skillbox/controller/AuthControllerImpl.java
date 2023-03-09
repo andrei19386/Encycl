@@ -18,7 +18,7 @@ import ru.skillbox.service.AuthService;
 @Log4j2
 public class AuthControllerImpl implements AuthController {
     private final AuthService authService;
-    private final CaptchaFileService captchaFileService;
+    //private final CaptchaFileService captchaFileService;
 
 
     @Override
@@ -35,7 +35,7 @@ public class AuthControllerImpl implements AuthController {
     @Override
     public ResponseEntity<Responsable> registration(RegistrationRequest request) {
         try {
-            authService.registration(request);
+      //      authService.registration(request);
             log.info("{} registered", request.getEmail());
             return ResponseEntity.ok().build();
         } catch (RuntimeException e) {
@@ -59,7 +59,7 @@ public class AuthControllerImpl implements AuthController {
 
     @Override
     public ResponseEntity<CaptchaResponse> captcha() {
-        return ResponseEntity.ok(captchaFileService.generateCaptchaResponse());
+        return null;// ResponseEntity.ok(captchaFileService.generateCaptchaResponse());
     }
 
 

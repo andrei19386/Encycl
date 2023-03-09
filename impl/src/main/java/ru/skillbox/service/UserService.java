@@ -20,9 +20,6 @@ import java.util.Optional;
 public class UserService implements UserDetailsService {
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
-    private final PersonService personService;
-
-
 
 
     public void registration(RegistrationRequest request) throws UserIsAlreadyRegisteredException {
@@ -32,7 +29,7 @@ public class UserService implements UserDetailsService {
         }
         registrationInDB(request);
         User user = getUserByEmail(request.getEmail());
-        personService.registrationPerson(user, request);
+     //   personService.registrationPerson(user, request);
     }
 
     private void registrationInDB(RegistrationRequest request) {
@@ -87,14 +84,14 @@ public class UserService implements UserDetailsService {
     public void deleteCurrentUser() {
         User user = getCurrentUser();
         user.setEnabled(false);
-        personService.deletePerson(personService.getCurrentPerson());
+      //  personService.deletePerson(personService.getCurrentPerson());
         save(user);
     }
 
     public void isBlockUserById(Long id, boolean isBlock) {
         User user = getUserById(id);
         user.setAccountNonLocked(!isBlock);
-        personService.isBlock(id, isBlock);
+      //  personService.isBlock(id, isBlock);
         save(user);
     }
 }
