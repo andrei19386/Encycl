@@ -12,7 +12,6 @@ import ru.skillbox.response.CaptchaResponse;
 import ru.skillbox.response.ErrorResponse;
 import ru.skillbox.response.Responsable;
 import ru.skillbox.service.AuthService;
-import ru.skillbox.service.CaptchaFileService;
 
 @RestController
 @RequiredArgsConstructor

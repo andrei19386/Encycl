@@ -8,7 +8,6 @@ import ru.skillbox.model.AccountController;
 import ru.skillbox.request.account.AccountEditRq;
 import ru.skillbox.response.ErrorResponse;
 import ru.skillbox.response.Responsable;
-import ru.skillbox.service.PersonService;
 import ru.skillbox.service.UserService;
 
 @RestController

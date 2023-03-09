@@ -32,10 +32,9 @@ import java.util.List;
 @RequiredArgsConstructor
 public class AuthService {
     private final UserService userService;
-    private final EmailService emailService;
+
     private final AuthenticationManager authenticationManager;
     private final JwtTokenProvider jwtTokenProvider;
-    private final CaptchaFileService captchaFileService;
 
     public Responsable login(LoginRequest request) throws UsernameNotFoundException {
         User user = userService.getUserByEmail(request.getEmail());
@@ -62,16 +61,16 @@ public class AuthService {
         User user = userService.getUserByEmail(email);
         String password = generateRandomPassword(8);
         userService.setNewPassword(user, password);
-        emailService.passwordRecoveryMessage(email, password);
+      //  emailService.passwordRecoveryMessage(email, password);
         return new PasswordRecoveryResponse().getResponse("ok");
     }
 
-    public void registration(RegistrationRequest request) throws UserIsAlreadyRegisteredException {
-        if(captchaFileService.getCaptchaFileByName(request.getCode()).isEmpty()){
-            throw new CaptchaException();
-        }
-        userService.registration(request);
-    }
+//    public void registration(RegistrationRequest request) throws UserIsAlreadyRegisteredException {
+//        if(captchaFileService.getCaptchaFileByName(request.getCode()).isEmpty()){
+//            throw new CaptchaException();
+//        }
+//        userService.registration(request);
+//    }
 
     public void logout() {
         GrantedAuthority authority = new SimpleGrantedAuthority(Role.ROLE_ANONYMOUS.getValue());

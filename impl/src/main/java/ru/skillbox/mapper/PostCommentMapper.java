@@ -9,7 +9,6 @@ import ru.skillbox.model.CommentLike;
 import ru.skillbox.model.Person;
 import ru.skillbox.model.Post;
 import ru.skillbox.model.PostComment;
-import ru.skillbox.repository.PostCommentRepository;
 import ru.skillbox.response.post.PostCommentDto;
 
 import java.sql.Timestamp;

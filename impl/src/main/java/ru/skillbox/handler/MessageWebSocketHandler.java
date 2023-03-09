@@ -10,9 +10,7 @@ import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.AbstractWebSocketHandler;
 import ru.skillbox.model.Person;
-import ru.skillbox.repository.PersonRepository;
 import ru.skillbox.request.MessageRq;
-import ru.skillbox.service.DialogService;
 
 
 import java.util.Map;
