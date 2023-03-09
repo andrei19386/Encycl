@@ -18,8 +18,8 @@
     <groupId>ru.skillbox</groupId>
     <artifactId>Encycl</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SocialNetwork</name>
-    <description>SocialNetwork</description>
+    <name>Encycl</name>
+    <description>Encycl</description>
     <properties>
         <java.version>11</java.version>
     </properties>
