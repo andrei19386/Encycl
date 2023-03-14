@@ -1,5 +1,5 @@
 FROM adoptopenjdk/openjdk11:jre-11.0.11_9
-MAINTAINER Group28
+MAINTAINER Encycl
 
 ARG JAR_FILE=impl/target/impl-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} backend.jar
