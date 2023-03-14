@@ -9,17 +9,21 @@ import javax.persistence.*;
 import java.util.Collection;
 
 @Entity
-@Table(name = "users")
+@Table(name = "person")
 @Setter
 @Getter
-public class User implements UserDetails {
+public class Person implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
+
+    private String login;
     private String password;
 
-    @Column(name = "account_non_locked")
+    private Integer age;
+
+    @Column(name = "is_account_non_locked")
     private boolean isAccountNonLocked;
     @Column(name = "is_enabled")
     private boolean isEnabled;
@@ -44,26 +48,15 @@ public class User implements UserDetails {
         return true;
     }
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return isAccountNonLocked;
-    }
 
     @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
-    @Override
-    public boolean isEnabled() {
-        return isEnabled;
+
+
+    public Person() {
     }
 
-    public User() {
-    }
-
-    public User(Long id, String email) {
-        this.id = id;
-        this.email = email;
-    }
 }
