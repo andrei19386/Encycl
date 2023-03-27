@@ -6,11 +6,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import ru.skillbox.request.account.AccountEditRq;
 import ru.skillbox.response.Responsable;
+import ru.stachek66.nlp.mystem.holding.MyStemApplicationException;
 
 @RequestMapping("api/v1/account")
 public interface AccountController {
 
-    ResponseEntity<Responsable> getCurrentPerson() throws JsonProcessingException;
+    ResponseEntity<Responsable> getCurrentPerson() throws JsonProcessingException, MyStemApplicationException;
 
     ResponseEntity<Responsable> editingAccount(@RequestBody AccountEditRq accountEditRq);
 

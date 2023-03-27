@@ -3,7 +3,7 @@ package ru.skillbox.response;
 import lombok.Data;
 import org.springframework.data.domain.Page;
 import ru.skillbox.common.AccountDto;
-import ru.skillbox.model.Person;
+import ru.skillbox.model.User;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class SearchResponse implements Responsable{
     private long page;
 
     public SearchResponse getOkResponse(List<AccountDto> people,
-                                               Page<Person> page) {
+                                               Page<User> page) {
         SearchResponse searchResponse = new SearchResponse();
         searchResponse.setTotalElements(page.getTotalElements());
         searchResponse.setContent(people);

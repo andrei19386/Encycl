@@ -1,4 +1,3 @@
-ru/skillbox/model/DialogController.class
 ru/skillbox/response/post/PostCommentDto.class
 ru/skillbox/enums/Role.class
 ru/skillbox/common/PhotoDto.class
@@ -9,7 +8,6 @@ ru/skillbox/response/MessageRs.class
 ru/skillbox/response/data/PersonDto$PersonDtoBuilder.class
 ru/skillbox/response/data/DialogDto$DialogDtoBuilder.class
 ru/skillbox/response/settings/NotificationDto.class
-ru/skillbox/model/SearchController.class
 ru/skillbox/request/settings/NotificationInputDto.class
 ru/skillbox/response/CaptchaResponse.class
 ru/skillbox/enums/LikeType.class
@@ -19,8 +17,6 @@ ru/skillbox/request/PostAddRequest.class
 ru/skillbox/common/CountryDto.class
 ru/skillbox/request/CommentAddRequest.class
 ru/skillbox/request/settings/SettingRq.class
-ru/skillbox/model/StorageController.class
-ru/skillbox/model/PostController.class
 ru/skillbox/response/SearchResponse.class
 ru/skillbox/common/SearchPersonDto.class
 ru/skillbox/response/PasswordRecoveryResponse.class
@@ -28,9 +24,6 @@ ru/skillbox/response/DialogListResponse$DialogListResponseBuilder.class
 ru/skillbox/response/data/DialogDto.class
 ru/skillbox/response/post/PostDto.class
 ru/skillbox/response/settings/DefaultRs.class
-ru/skillbox/model/PostCommentController.class
-ru/skillbox/model/LikeController.class
-ru/skillbox/model/FriendsController.class
 ru/skillbox/response/settings/SettingsDto.class
 ru/skillbox/request/MessageRq.class
 ru/skillbox/response/DataMessage$DataMessageBuilder.class
@@ -51,7 +44,6 @@ ru/skillbox/request/LoginRequest.class
 ru/skillbox/common/CityDto.class
 ru/skillbox/request/PasswordRecoveryRequest.class
 ru/skillbox/common/CityDto$CityDtoBuilder.class
-ru/skillbox/model/FeedsController.class
 ru/skillbox/response/Responsable.class
 ru/skillbox/response/post/PostResponse.class
 ru/skillbox/response/settings/NotificationSentDto.class
